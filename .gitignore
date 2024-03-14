@@ -4,5 +4,5 @@ hello.js
 debug
 .env
 .env.example
-pageobjects
+pageobject
 step-definition
