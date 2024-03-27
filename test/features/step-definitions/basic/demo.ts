@@ -1,4 +1,4 @@
-import { Given, When, Then, setDefaultTimeout } from "@wdio/cucumber-framework";
+import { Given, When, Then } from "@wdio/cucumber-framework";
 import { expect } from "chai";
 
 Given(/^Google Page is opened$/, async function () {

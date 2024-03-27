@@ -36,7 +36,8 @@ export const config: Options.Testrunner = {
   // The path of the spec files will be resolved relative from the directory of
   // of the config file unless it's absolute.
   //
-  specs: [`${process.cwd()}/test/features/demo/cucumberDemo.feature`],
+  //specs: [`${process.cwd()}/test/features/demo/cucumberDemo.feature`],
+  specs: [`${process.cwd()}/test/features/demo/Inventory/inventory.feature`],
   // Patterns to exclude.
   exclude: [
     // 'path/to/excluded/files'
@@ -171,7 +172,8 @@ export const config: Options.Testrunner = {
   // If you are using Cucumber you need to specify the location of your step definitions.
   cucumberOpts: {
     // <string[]> (file/dir) require files before executing features
-    require: [`./test/features/step-definitions/basic/*`],
+   // require: [`./test/features/step-definitions/basic/demo.ts`],
+   require: [`./test/features/step-definitions/advance/given.ts`],
     // <boolean> show full backtrace for errors
     backtrace: false,
     // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)
