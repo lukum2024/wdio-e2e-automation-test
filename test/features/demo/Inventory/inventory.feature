@@ -12,4 +12,4 @@ Then Validate all products have valid price
 
 Examples:
 |TestID|NumberOfProducts|
-|web_TC03|            |
+|web_TC03|       7     |

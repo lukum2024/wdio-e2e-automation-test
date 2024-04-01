@@ -2,10 +2,12 @@ import { Given } from "@wdio/cucumber-framework";
 import * as dotenv from 'dotenv';
 dotenv.config();
 import logger from "../../../helper/logger.ts"
+import reporter  from "../../../helper/reporter.ts";
 
 Given(/^As (a|an) (.*) user I Login to inventory web app$/, async function (prefix,usertype,dataTable) {
   
   //const weburl = await JSON.parse(process.env.WEBURL);
+  reporter.addStep(this.testid,"info","Login to Sauce APP")
   logger.info(`>>${this.testid} given test has started`)
   let dt=dataTable.hashes()
   console.log(`>>type of dt:${typeof dt}`)
@@ -53,4 +55,5 @@ console.log(`<<Username:${process.env.TEST_APP_USERNAME}`)
   // await $("#password").setValue("secret_sauce");
   // await $("#login-button").click();
   // await browser.pause(2000)
+  reporter.addStep(this.testid,"debug","Login is successful")
 });
