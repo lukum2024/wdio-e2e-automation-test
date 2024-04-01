@@ -1,16 +1,20 @@
 import { Given } from "@wdio/cucumber-framework";
 import * as dotenv from 'dotenv';
 dotenv.config();
+import logger from "../../../helper/logger.ts"
 
 Given(/^As (a|an) (.*) user I Login to inventory web app$/, async function (prefix,usertype,dataTable) {
   
   //const weburl = await JSON.parse(process.env.WEBURL);
+  logger.info(`>>${this.testid} given test has started`)
   let dt=dataTable.hashes()
   console.log(`>>type of dt:${typeof dt}`)
   console.log(`>>The type of dt:${dt.constructor}`)
-  console.log(`>>values of dt:${JSON.stringify(dt)}`)
-  console.log(`<<usertype:${usertype}`)
-  console.log(`<<prefix:${prefix}`)
+
+  console.log(`>>testid in given:${this.testid}`)
+ // console.log(`>>values of dt:${JSON.stringify(dt)}`)
+  //console.log(`<<usertype:${usertype}`)
+  //console.log(`<<prefix:${prefix}`)
  //let weburl = process.env.WEBURL;
   await browser.url("https://www.saucedemo.com/");
   await browser.pause(2000)

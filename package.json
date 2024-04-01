@@ -7,7 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "wdio": "wdio run ./wdio.conf.ts",
-    "demo:test": "set headless=Y && npx wdio config/wdio.test.config.ts  --enable-chrome-browser-cloud-management --cucumberOpts.tagExpression=@demo ",
+    "demo:test": "set headless=Y && set debug=y && npx wdio config/wdio.test.config.ts  --enable-chrome-browser-cloud-management --cucumberOpts.tagExpression=@demo ",
     "smoke:test": "set headless=Y && npx wdio config/.test.conf.ts --cucumberOpts.tagExpression=@smoke",
     "demo:uat": "set headless=N && npx wdio config/wdio.uat.conf.ts --cucumberOpts.tagExpression=@demo",
     "smoke:uat": "set headless=Y && npx wdio config/wdio.uat.conf.ts --cucumberOpts.tagExpression=@smoke",
@@ -31,7 +31,8 @@
     "chromedriver": "^123.0.0",
     "dotenv": "^16.4.5",
     "ts-node": "^10.9.2",
-    "typescript": "^5.4.2"
+    "typescript": "^5.4.2",
+    "winston": "^3.13.0"
   },
   "dependencies": {
     "save-dev": "^0.0.1-security"

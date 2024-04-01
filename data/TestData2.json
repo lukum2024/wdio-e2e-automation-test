@@ -1,0 +1,227 @@
+{
+  "gherkinDocument": {
+    "feature": {
+      "tags": [],
+      "location": { "line": 1, "column": 1 },
+      "language": "en",
+      "keyword": "Feature",
+      "name": "Web Interaction",
+      "description": "",
+      "children": [
+        {
+          "scenario": {
+            "id": "84ab395c-2256-4e00-90af-093612b37472",
+            "tags": [
+              {
+                "location": { "line": 2, "column": 1 },
+                "name": "@demo",
+                "id": "7cf6a645-4475-43c3-8f41-647022f4ccb9"
+              },
+              {
+                "location": { "line": 2, "column": 7 },
+                "name": "@smoke",
+                "id": "8ea64b9d-837e-4aa8-bd32-e6e3a68a3fba"
+              }
+            ],
+            "location": { "line": 3, "column": 1 },
+            "keyword": "Scenario Outline",
+            "name": "<TestID>: Demo Inventory",
+            "description": "",
+            "steps": [
+              {
+                "id": "181fab22-1918-4126-bb3d-341c945ce046",
+                "location": { "line": 5, "column": 1 },
+                "keyword": "Given ",
+                "keywordType": "Context",
+                "text": "As a standard user I Login to inventory web app",
+                "dataTable": {
+                  "location": { "line": 6, "column": 1 },
+                  "rows": [
+                    {
+                      "id": "55266295-7140-4c6a-bf82-c4911eaa735e",
+                      "location": { "line": 6, "column": 1 },
+                      "cells": [
+                        {
+                          "location": { "line": 6, "column": 2 },
+                          "value": "UserType"
+                        },
+                        {
+                          "location": { "line": 6, "column": 11 },
+                          "value": "UserName"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "ee3f9ee6-e598-482c-8aeb-5cb1f0a11948",
+                      "location": { "line": 7, "column": 1 },
+                      "cells": [
+                        {
+                          "location": { "line": 7, "column": 2 },
+                          "value": "stdUsr"
+                        },
+                        {
+                          "location": { "line": 7, "column": 9 },
+                          "value": "standard_user"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "5f38ed5a-4e26-49ac-8b8d-3183c1ddce4d",
+                      "location": { "line": 8, "column": 1 },
+                      "cells": [
+                        {
+                          "location": { "line": 8, "column": 2 },
+                          "value": "PrbUsr"
+                        },
+                        {
+                          "location": { "line": 8, "column": 9 },
+                          "value": "problem_user"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "0f5f57f0-e98d-4eca-993c-4894a6968f80",
+                      "location": { "line": 9, "column": 1 },
+                      "cells": [
+                        {
+                          "location": { "line": 9, "column": 2 },
+                          "value": "PerfUsr"
+                        },
+                        {
+                          "location": { "line": 9, "column": 10 },
+                          "value": "performance_glitch_user"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "de77869e-d260-421d-a3a3-9815d670e9b0",
+                "location": { "line": 10, "column": 1 },
+                "keyword": "Then ",
+                "keywordType": "Outcome",
+                "text": "Inventory page should list <NumberOfProducts>"
+              },
+              {
+                "id": "ed2a38f0-a731-4ece-b03f-e4938478a81f",
+                "location": { "line": 11, "column": 1 },
+                "keyword": "Then ",
+                "keywordType": "Outcome",
+                "text": "Validate all products have valid price"
+              }
+            ],
+            "examples": [
+              {
+                "id": "5bd482f1-4309-4290-88d8-d81535bfa5cd",
+                "tags": [],
+                "location": { "line": 13, "column": 1 },
+                "keyword": "Examples",
+                "name": "",
+                "description": "",
+                "tableHeader": {
+                  "id": "55f58196-b533-4455-ae04-ced4bcf2553d",
+                  "location": { "line": 14, "column": 1 },
+                  "cells": [
+                    {
+                      "location": { "line": 14, "column": 2 },
+                      "value": "TestID"
+                    },
+                    {
+                      "location": { "line": 14, "column": 9 },
+                      "value": "NumberOfProducts"
+                    }
+                  ]
+                },
+                "tableBody": [
+                  {
+                    "id": "bacb08a0-4f42-4ea8-9e24-bbb1a2cfd75e",
+                    "location": { "line": 15, "column": 1 },
+                    "cells": [
+                      {
+                        "location": { "line": 15, "column": 2 },
+                        "value": "web_TC03"
+                      },
+                      { "location": { "line": 15, "column": 11 }, "value": "6" }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "comments": [
+      {
+        "location": { "line": 4, "column": 1 },
+        "text": "#Given Login to inventory web app"
+      }
+    ],
+    "uri": "test\\features\\demo\\Inventory\\inventory.feature"
+  },
+  "pickle": {
+    "id": "19e33c04-69e8-4f77-a183-072371f1dee6",
+    "uri": "test\\features\\demo\\Inventory\\inventory.feature",
+    "astNodeIds": [
+      "84ab395c-2256-4e00-90af-093612b37472",
+      "bacb08a0-4f42-4ea8-9e24-bbb1a2cfd75e"
+    ],
+    "name": "web_TC03: Demo Inventory",
+    "language": "en",
+    "steps": [
+      {
+        "id": "464a4362-c916-43e0-87fb-0d4ccbab50ff",
+        "text": "As a standard user I Login to inventory web app",
+        "type": "Context",
+        "argument": {
+          "dataTable": {
+            "rows": [
+              { "cells": [{ "value": "UserType" }, { "value": "UserName" }] },
+              {
+                "cells": [{ "value": "stdUsr" }, { "value": "standard_user" }]
+              },
+              { "cells": [{ "value": "PrbUsr" }, { "value": "problem_user" }] },
+              {
+                "cells": [
+                  { "value": "PerfUsr" },
+                  { "value": "performance_glitch_user" }
+                ]
+              }
+            ]
+          }
+        },
+        "astNodeIds": [
+          "181fab22-1918-4126-bb3d-341c945ce046",
+          "bacb08a0-4f42-4ea8-9e24-bbb1a2cfd75e"
+        ],
+        "keyword": "Given "
+      },
+      {
+        "id": "93400fe0-1f24-4bed-a21f-1e5a732ac1db",
+        "text": "Inventory page should list 6",
+        "type": "Outcome",
+        "astNodeIds": [
+          "de77869e-d260-421d-a3a3-9815d670e9b0",
+          "bacb08a0-4f42-4ea8-9e24-bbb1a2cfd75e"
+        ],
+        "keyword": "Then "
+      },
+      {
+        "id": "c2b31881-aac5-485c-8873-cd723857723b",
+        "text": "Validate all products have valid price",
+        "type": "Outcome",
+        "astNodeIds": [
+          "ed2a38f0-a731-4ece-b03f-e4938478a81f",
+          "bacb08a0-4f42-4ea8-9e24-bbb1a2cfd75e"
+        ],
+        "keyword": "Then "
+      }
+    ],
+    "tags": [
+      { "name": "@demo", "astNodeId": "7cf6a645-4475-43c3-8f41-647022f4ccb9" },
+      { "name": "@smoke", "astNodeId": "8ea64b9d-837e-4aa8-bd32-e6e3a68a3fba" }
+    ]
+  },
+  "testCaseStartedId": "0abc9ced-219a-4422-bdef-1e8324b42c2c"
+}
