@@ -1,11 +1,15 @@
 {
     "compilerOptions": {
         "moduleResolution": "node",
-        "module": "ESNext",
+       // "module": "ESNext",
+       "module": "ESNext", //used for POM
+     // "resolveJSON":true, 
+   //    "resolvePackageJsonImports": true, //POM
+     //  "suppressExcessPropertyErrors": true, //POM
         "esModuleInterop":true,
-        "target": "es2022",
+        "target": "ES2019",
         "lib": [
-            "es2022",
+            "ES2019",
             "dom"
         ],
         "types": [
@@ -26,7 +30,10 @@
     },
     "include": [
         "test",
-        "wdio.conf.ts"
+        "wdio.conf.ts",    
+    ],
+    "exclude": [
+        "node_modules"
     ]
 }
 

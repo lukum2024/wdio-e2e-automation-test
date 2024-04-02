@@ -8,7 +8,7 @@ let headless = process.env.HEADLESS;
 let debug=process.env.Debug;
 console.log(`<<The headless flag is:${headless}`);
 import type { Options } from "@wdio/types";
-export const config: Options.Testrunner = {
+ export const config: Options.Testrunner = {
   //
   // ====================
   // Runner Configuration
@@ -422,3 +422,5 @@ export const config: Options.Testrunner = {
   // afterAssertion: function(params) {
   // }
 };
+//export deafult config
+export default config
