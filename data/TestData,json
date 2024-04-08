@@ -1,98 +1,33 @@
 {
-  "id": "ed91a0d9-33fa-47d3-9d21-5f31f64046a2",
-  "uri": "test\\features\\demo\\Inventory\\inventory.feature",
-  "astNodeIds": [
-    "bf524cee-8751-42f5-b003-5adca4a00443",
-    "0e39584e-c164-4be1-bef4-b694c6862123"
-  ],
-  "name": "Demo Web Interaction",
-  "language": "en",
-  "steps": [
-    {
-      "id": "ca009791-e0bc-47ee-b4d8-e189c800e7a4",
-      "text": "As a standard user I Login to inventory web app",
-      "type": "Context",
-      "argument": {
-        "dataTable": {
-          "rows": [
-            {
-              "cells": [
-                {
-                  "value": "UserType"
-                },
-                {
-                  "value": "UserName"
-                }
-              ]
-            },
-            {
-              "cells": [
-                {
-                  "value": "stdUsr"
-                },
-                {
-                  "value": "standard_user"
-                }
-              ]
-            },
-            {
-              "cells": [
-                {
-                  "value": "PrbUsr"
-                },
-                {
-                  "value": "problem_user"
-                }
-              ]
-            },
-            {
-              "cells": [
-                {
-                  "value": "PerfUsr"
-                },
-                {
-                  "value": "performance_glitch_user"
-                }
-              ]
-            }
-          ]
-        }
-      },
-      "astNodeIds": [
-        "38d077b6-5f7d-4363-bfd0-02797383ef63",
-        "0e39584e-c164-4be1-bef4-b694c6862123"
-      ],
-      "keyword": "Given "
-    },
-    {
-      "id": "f32037ab-1291-44f0-99ee-b2a91a163094",
-      "text": "Inventory page should list 6",
-      "type": "Outcome",
-      "astNodeIds": [
-        "834e6eb1-8cfd-4bb0-96e9-015c887ccc36",
-        "0e39584e-c164-4be1-bef4-b694c6862123"
-      ],
-      "keyword": "Then "
-    },
-    {
-      "id": "733625a0-b645-4e17-83f3-048b98cfddb5",
-      "text": "Validate all products have valid price",
-      "type": "Outcome",
-      "astNodeIds": [
-        "824a5c36-025f-4418-a5eb-9676f2e185f9",
-        "0e39584e-c164-4be1-bef4-b694c6862123"
-      ],
-      "keyword": "Then "
+  "req": {
+    "method": "GET",
+    "url": "https://reqres.in/api/users?page=2",
+    "headers": {
+      "authorization": "Bearer undefined",
+      "content-type": "application/json",
+      "accept": "application/json"
     }
-  ],
-  "tags": [
-    {
-      "name": "@demo",
-      "astNodeId": "46716364-a204-40a8-bb91-11fca6558a5d"
-    },
-    {
-      "name": "@smoke",
-      "astNodeId": "c4b29ec8-dae4-40d2-9f3e-9f6839a8b522"
-    }
-  ]
+  },
+  "header": {
+    "date": "Thu, 04 Apr 2024 08:50:17 GMT",
+    "content-type": "application/json; charset=utf-8",
+    "transfer-encoding": "chunked",
+    "connection": "close",
+    "report-to": "{\"group\":\"heroku-nel\",\"max_age\":3600,\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?ts=1712169370&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&s=HjXKvYciVVgaWmXJwsDyVpVN67ln25JrIrEoakiPQ%2BA%3D\"}]}",
+    "reporting-endpoints": "heroku-nel=https://nel.heroku.com/reports?ts=1712169370&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&s=HjXKvYciVVgaWmXJwsDyVpVN67ln25JrIrEoakiPQ%2BA%3D",
+    "nel": "{\"report_to\":\"heroku-nel\",\"max_age\":3600,\"success_fraction\":0.005,\"failure_fraction\":0.05,\"response_headers\":[\"Via\"]}",
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*",
+    "etag": "W/\"406-ut0vzoCuidvyMf8arZpMpJ6ZRDw\"",
+    "via": "1.1 vegur",
+    "cache-control": "max-age=14400",
+    "cf-cache-status": "HIT",
+    "age": "222",
+    "vary": "Accept-Encoding",
+    "server": "cloudflare",
+    "cf-ray": "86f00ccc7ff1208e-IAD",
+    "content-encoding": "gzip"
+  },
+  "status": 200,
+  "text": "{\"page\":2,\"per_page\":6,\"total\":12,\"total_pages\":2,\"data\":[{\"id\":7,\"email\":\"michael.lawson@reqres.in\",\"first_name\":\"Michael\",\"last_name\":\"Lawson\",\"avatar\":\"https://reqres.in/img/faces/7-image.jpg\"},{\"id\":8,\"email\":\"lindsay.ferguson@reqres.in\",\"first_name\":\"Lindsay\",\"last_name\":\"Ferguson\",\"avatar\":\"https://reqres.in/img/faces/8-image.jpg\"},{\"id\":9,\"email\":\"tobias.funke@reqres.in\",\"first_name\":\"Tobias\",\"last_name\":\"Funke\",\"avatar\":\"https://reqres.in/img/faces/9-image.jpg\"},{\"id\":10,\"email\":\"byron.fields@reqres.in\",\"first_name\":\"Byron\",\"last_name\":\"Fields\",\"avatar\":\"https://reqres.in/img/faces/10-image.jpg\"},{\"id\":11,\"email\":\"george.edwards@reqres.in\",\"first_name\":\"George\",\"last_name\":\"Edwards\",\"avatar\":\"https://reqres.in/img/faces/11-image.jpg\"},{\"id\":12,\"email\":\"rachel.howell@reqres.in\",\"first_name\":\"Rachel\",\"last_name\":\"Howell\",\"avatar\":\"https://reqres.in/img/faces/12-image.jpg\"}],\"support\":{\"url\":\"https://reqres.in/#support-heading\",\"text\":\"To keep ReqRes free, contributions towards server costs are appreciated!\"}}"
 }

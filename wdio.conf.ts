@@ -39,7 +39,7 @@ import type { Options } from "@wdio/types";
   // of the config file unless it's absolute.
   //
   //specs: [`${process.cwd()}/test/features/demo/cucumberDemo.feature`],
-  specs: [`${process.cwd()}/test/features/demo/Inventory/inventory.feature`],
+  specs: [`${process.cwd()}/test/features/commerce/E2E_Test.feature`],
   // Patterns to exclude.
   exclude: [
     // 'path/to/excluded/files'
@@ -61,45 +61,39 @@ import type { Options } from "@wdio/types";
   // from the same test should run tests.
   //
   maxInstances: 10,
-  //
-  // If you have trouble getting all important capabilities together, check out the
-  // Sauce Labs platform configurator - a great tool to configure your capabilities:
-  // https://saucelabs.com/platform/platform-configurator
-  //
-  //Additional Chrome options
-  // --headless
-  // --disable-dev-shm-usage
-  //--no-sandbox
-  //--window-size=1920,1080
-  //--proxy-server=http://domain
-  //binary=<location>
-  //---auth-server-whitelist="_"
+ 
 
   capabilities: [
     {
+      maxInstances:5,
       browserName: "chrome",
       browserVersion: "123.0.6312.58",
-    
-
       // browserVersion:'122.0.6261.131',
-      "goog:chromeOptions": {
-        args:
-          headless.toUpperCase() === "Y"
-            ? [
-                "--enable-chrome-browser-cloud-management",
-                "--disable-web-security",
-                "--headless",
-                "--disable-dev-shm-usage",
-                "--no-sandbox",
-                "--window-size=1920,1080",
-              ]
-            : [],
-      },
+      // "goog:chromeOptions": {
+      //   args:
+      //     headless.toUpperCase() === "Y"
+      //       ? [
+      //           "--enable-chrome-browser-cloud-management",
+      //           "--disable-web-security",
+      //           "--headless",
+      //           "--disable-dev-shm-usage",
+      //           "--no-sandbox",
+      //           "--window-size=1920,1080",
+      //           "disable-infobars"
+      //         ]
+      //       : [],
+      // },
+      acceptInsecureCerts: true,
+      timeouts: { implicit: 15000, pageLoad: 2000, script: 3000 },
+    },
+  
+    {
+      maxInstances:5,
+      browserName: "firefox",
       acceptInsecureCerts: true,
       timeouts: { implicit: 15000, pageLoad: 2000, script: 3000 },
     },
   ],
-
   //
   // ===================
   // Test Configurations
@@ -147,7 +141,7 @@ import type { Options } from "@wdio/types";
   // Services take over a specific job you don't want to take care of. They enhance
   // your test setup with almost no effort. Unlike plugins, they don't add new
   // commands. Instead, they hook themselves up into the test process.
-  // services: [],
+   services: ['chromedriver','geckodriver'],
   //
   // Framework you want to run your specs with.
   // The following are supported: Mocha, Jasmine, and Cucumber
@@ -341,9 +335,12 @@ import type { Options } from "@wdio/types";
     // console.log(`>>scenario:${JSON.stringify(scenario)}`);
     // console.log(`>>result:${JSON.stringify(result)}`);
     // console.log(`>>context:${JSON.stringify(context)}`);
+    console.log(`Step: ${step.text}`);
+    console.log(`Status: ${result.passed ? 'Passed' : 'Failed'}`);
     if (!result.passed) {
       await browser.takeScreenshot();
     }
+    
   },
   /**
    *

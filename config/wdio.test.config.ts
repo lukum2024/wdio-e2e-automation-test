@@ -5,7 +5,10 @@ import baseconfig from "../wdio.conf.ts";
  export const config=Object.assign(baseconfig,
     {
     environment:"Test",
-    WEBURL:"https://www.saucedemo.com",   
+    WEBURL:"https://www.saucedemo.com",
+    reqresBaseURL:"https://reqres.in",   
+    nopCommerceURL:"https://admin-demo.nopcommerce.com/admin",
+    custURL:"https://admin-demo.nopcommerce.com/Admin/Customer/List"
 });
 
 

@@ -7,7 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "wdio": "wdio run ./wdio.conf.ts",
-    "demo:test": "set headless=Y && set debug=y && npx wdio config/wdio.test.config.ts  --enable-chrome-browser-cloud-management --cucumberOpts.tagExpression=@demo ",
+    "demo:test": "set headless=Y && set debug=y && npx wdio config/wdio.test.config.ts  --enable-chrome-browser-cloud-management --cucumberOpts.tagExpression=@API",
     "smoke:test": "set headless=Y && npx wdio config/.test.conf.ts --cucumberOpts.tagExpression=@smoke",
     "demo:uat": "set headless=N && npx wdio config/wdio.uat.conf.ts --cucumberOpts.tagExpression=@demo",
     "smoke:uat": "set headless=Y && npx wdio config/wdio.uat.conf.ts --cucumberOpts.tagExpression=@smoke",
@@ -22,16 +22,20 @@
   "license": "ISC",
   "devDependencies": {
     "@types/chai": "^4.3.12",
+    "@types/supertest": "^6.0.2",
     "@wdio/allure-reporter": "^8.32.4",
     "@wdio/cli": "^8.33.1",
     "@wdio/cucumber-framework": "^8.33.1",
     "@wdio/local-runner": "^8.33.1",
     "@wdio/spec-reporter": "^8.32.4",
     "chai": "^5.1.0",
-    "chromedriver": "^123.0.0",
+    "chromedriver": "^123.0.1",
     "dotenv": "^16.4.5",
+    "supertest": "^6.3.4",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.2",
+    "wdio-chromedriver-service": "^8.1.1",
+    "wdio-geckodriver-service": "^5.0.2",
     "winston": "^3.13.0"
   },
   "dependencies": {

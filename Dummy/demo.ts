@@ -1,8 +1,8 @@
 import { Given } from "@wdio/cucumber-framework";
 import * as dotenv from 'dotenv';
 dotenv.config();
-import logger from "../../../helper/logger.ts"
-import reporter  from "../../../helper/reporter.ts";
+import logger from "../test/helper/logger.ts"
+import reporter  from "../test/helper/reporter.ts";
 
 Given(/^As (a|an) (.*) user I Login to inventory web app$/, async function (prefix,usertype,dataTable) {
   

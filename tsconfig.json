@@ -1,6 +1,7 @@
 {
     "compilerOptions": {
         "moduleResolution": "node",
+        "resolveJsonModule": true,
        // "module": "ESNext",
        "module": "ESNext", //used for POM
      // "resolveJSON":true, 
@@ -21,7 +22,7 @@
         "skipLibCheck": true,
         "noEmit": true,
         "allowImportingTsExtensions": true,
-        "resolveJsonModule": true,
+       
         "isolatedModules": true,
         "strict": false,
         "noUnusedLocals": true,
@@ -30,7 +31,7 @@
     },
     "include": [
         "test",
-        "wdio.conf.ts",    
+        "wdio.conf.ts", "Dummy/demo.ts",    
     ],
     "exclude": [
         "node_modules"
