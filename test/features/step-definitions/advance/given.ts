@@ -1,5 +1,5 @@
 import { Given } from "@wdio/cucumber-framework";
-import chai, { expect } from "chai";
+import  { expect } from "chai";
 import config from "../../../../config/wdio.test.config.ts";
 import HomePage from "../page-Objects/sause.home.page.ts";
 import report from "../../../helper/reporter.ts";
@@ -8,9 +8,7 @@ import constants from "../../../../data/constants.json" assert { type: "json" };
 import apiHelper from "../../../helper/apiHelper.ts";
 import fs from "fs";
 
-Given(
-  /^As (a|an) (.*) user I Login to inventory web app$/,
-  async function (prefix, usertype, dataTable) {
+Given(/^As (a|an) (.*) user I Login to inventory web app$/,async function (prefix, usertype, dataTable) {
     // let dt=await dataTable.hashes()
     try {
       //@ts-ignore

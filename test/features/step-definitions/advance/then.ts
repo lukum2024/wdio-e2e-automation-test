@@ -4,7 +4,6 @@ import logger from "../../../helper/logger.ts";
 import reporter from "../../../helper/reporter.ts";
 import config from "../../../../config/wdio.test.config.ts";
 import fs from "fs";
-import nopCommerceCustlistPage from "../page-Objects/nopCommerce.custlist.page.ts";
 import nop from "../page-Objects/nopCommerce.custlist.page.ts";
 
 Then(
