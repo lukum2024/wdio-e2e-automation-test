@@ -39,7 +39,7 @@ import type { Options } from "@wdio/types";
   // of the config file unless it's absolute.
   //
   //specs: [`${process.cwd()}/test/features/demo/cucumberDemo.feature`],
-  specs: [`${process.cwd()}/test/features/commerce/E2E_Test.feature`],
+  specs: [`${process.cwd()}/test/features/Nexus/service-Line.feature`],
   // Patterns to exclude.
   exclude: [
     // 'path/to/excluded/files'
@@ -65,7 +65,7 @@ import type { Options } from "@wdio/types";
 
   capabilities: [
     {
-      maxInstances:5,
+      maxInstances:1,
       browserName: "chrome",
       browserVersion: "123.0.6312.58",
       // browserVersion:'122.0.6261.131',
@@ -87,12 +87,12 @@ import type { Options } from "@wdio/types";
       timeouts: { implicit: 15000, pageLoad: 2000, script: 3000 },
     },
   
-    {
-      maxInstances:5,
-      browserName: "firefox",
-      acceptInsecureCerts: true,
-      timeouts: { implicit: 15000, pageLoad: 2000, script: 3000 },
-    },
+    // {
+    //   maxInstances:1,
+    //   browserName: "firefox",
+    //   acceptInsecureCerts: true,
+    //   timeouts: { implicit: 15000, pageLoad: 2000, script: 3000 },
+    // },
   ],
   //
   // ===================
@@ -141,7 +141,7 @@ import type { Options } from "@wdio/types";
   // Services take over a specific job you don't want to take care of. They enhance
   // your test setup with almost no effort. Unlike plugins, they don't add new
   // commands. Instead, they hook themselves up into the test process.
-   services: ['chromedriver','geckodriver'],
+   services: ['chromedriver'],//,'geckodriver'],
   //
   // Framework you want to run your specs with.
   // The following are supported: Mocha, Jasmine, and Cucumber
@@ -181,7 +181,7 @@ import type { Options } from "@wdio/types";
   cucumberOpts: {
     // <string[]> (file/dir) require files before executing features
     // require: [`./test/features/step-definitions/basic/demo.ts`],
-    require: [`./test/features/step-definitions/advance/*.ts`],
+    require: [`./test/features/step-definitions/Nexus/service-line.ts`],
     // <boolean> show full backtrace for errors
     backtrace: false,
     // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)
@@ -199,12 +199,13 @@ import type { Options } from "@wdio/types";
     // <boolean> fail if there are any undefined or pending steps
     strict: false,
     throwError:true,
+    ignoreUndefinedDefinitions:true,
     // <string> (expression) only execute the features or scenarios with tags matching the expression
     //tagExpression: '@demo',
     // <number> timeout for step definitions
     timeout: 60000,
     // <boolean> Enable this config to treat undefined definitions as warnings.
-    ignoreUndefinedDefinitions: false,
+
   },
 
   //
@@ -267,7 +268,7 @@ import type { Options } from "@wdio/types";
     //@ts-ignore
     browser.options["environment"] = config.environment;
     //@ts-ignore
-    browser.options["WEBURL"] = config.WEBURL;
+    browser.options["WEBURL"] = config.MNC_APP;
   },
   /**
    * Runs before a WebdriverIO command gets executed.
